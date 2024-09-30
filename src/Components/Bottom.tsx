@@ -26,46 +26,48 @@ const Bottom = () => {
   };
 
   return (
-    <View style={styles.container}>
-        
-      <View style={styles.BottomContainer}>
-        <TouchableOpacity style={styles.BottomMenu}>
-          <BarChart />
-        </TouchableOpacity>
 
-        <TouchableOpacity style={styles.BottomMenu}>
-          <Layers />
-        </TouchableOpacity>
+    <>
+      <View style={styles.container}>
+          
+        <View style={styles.BottomContainer}>
+          <TouchableOpacity style={styles.BottomMenu}>
+            <BarChart />
+          </TouchableOpacity>
 
-        <TouchableOpacity style={styles.BottomPlus} onPress={openBottomSheet}>
-          <Plus />
-        </TouchableOpacity>
+          <TouchableOpacity style={styles.BottomMenu}>
+            <Layers />
+          </TouchableOpacity>
 
-        <TouchableOpacity style={styles.BottomMenu}>
-          <Search />
-        </TouchableOpacity>
+          <TouchableOpacity style={styles.BottomPlus} onPress={openBottomSheet}>
+            <Plus />
+          </TouchableOpacity>
 
-        <TouchableOpacity style={styles.BottomMenu}>
-          <Person />
-        </TouchableOpacity>
+          <TouchableOpacity style={styles.BottomMenu}>
+            <Search />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.BottomMenu}>
+            <Person />
+          </TouchableOpacity>
+        </View>
+
       </View>
 
       {/* Bottom Sheet */}
       <BottomSheetComponent isVisible={isVisible} closeBottomSheet={closeBottomSheet} />
 
-    </View>
+    </>
+    
   );
 };
 
 const styles = StyleSheet.create({
     container: {
         position: 'absolute', 
-        top: 0, 
-        left: 0, 
         right: 0, 
         bottom: 0, 
         width: '100%', 
-        height: '100%',
     },
     
     BottomContainer: {
